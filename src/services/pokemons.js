@@ -6,4 +6,9 @@ const getAll = () => {
   return request.then((res) => res.data);
 };
 
-export default { getAll };
+const pokemonDetail = (name) => {
+  const request = axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  return request.then((res) => res.data);
+};
+
+export default { getAll, pokemonDetail };

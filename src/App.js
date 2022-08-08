@@ -6,6 +6,7 @@ import PokemonsList from './components/PokemonList.js';
 import Favorite from './components/Favorite';
 import NotFound from './components/NotFound.js';
 import Footer from './components/Footer';
+import PokemonDetails from './components/PokemonDetails.js';
 
 import { PokemonsContextProvider } from './context/PokemonsContext.js';
 import Pokemon from './components/Pokemon';
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/pokemons" element={<PokemonsList />} />
               <Route path="/favorites" element={<Favorite />} />
+              <Route path="/pokemon/:name" element={<PokemonDetails />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PokemonsContextProvider>

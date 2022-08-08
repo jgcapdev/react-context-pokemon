@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from 'react';
 import { Button } from 'react-bootstrap';
 import PokemonsContext from '../context/PokemonsContext.js';
 
+import { Link } from 'react-router-dom';
+
 const Pokemon = ({ pks, setButton = true }) => {
   const { favorites, setFavorites } = useContext(PokemonsContext);
 
@@ -15,6 +17,8 @@ const Pokemon = ({ pks, setButton = true }) => {
     const filtered = favorites.filter((poke) => pokemon.name !== poke.name);
     setFavorites(filtered);
   };
+
+  const handleDetailsPokemon = (pokemon) => {};
 
   return (
     <>
@@ -35,15 +39,21 @@ const Pokemon = ({ pks, setButton = true }) => {
                     Add to favorites
                   </Button>
                 ) : (
-                  <Button
-                    onClick={() => {
-                      handleDeletePokemon(pokemon);
-                    }}
-                    type="button"
-                    className="btn btn-danger mx-2"
-                  >
-                    Delete from favorites
-                  </Button>
+                  <>
+                    <Link className="btn btn-success mx-2" to={`/pokemon/${pokemon.name}`}>
+                      View details
+                    </Link>
+
+                    <Button
+                      onClick={() => {
+                        handleDeletePokemon(pokemon);
+                      }}
+                      type="button"
+                      className="btn btn-danger mx-2"
+                    >
+                      Delete from favorites
+                    </Button>
+                  </>
                 )}
               </div>
             </td>
