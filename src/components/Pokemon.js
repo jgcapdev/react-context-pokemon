@@ -10,7 +10,8 @@ const Pokemon = ({ pks, setButton = true }) => {
   };
 
   const handleDeletePokemon = (pokemon) => {
-    console.log('delete');
+    const filtered = pokemons.filter((poke) => pokemon.name !== poke.name);
+    setPokemons(filtered);
   };
 
   return (
@@ -34,7 +35,7 @@ const Pokemon = ({ pks, setButton = true }) => {
                 ) : (
                   <Button
                     onClick={() => {
-                      handleDeletePokemon();
+                      handleDeletePokemon(pokemon);
                     }}
                     type="button"
                     className="btn btn-danger mx-2"
