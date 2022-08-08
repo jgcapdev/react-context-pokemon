@@ -12,7 +12,7 @@ const Favorite = () => {
     <div>
       <h1 className="text-center">Favorites</h1>
       {favorites.length === 0 ? (
-        <h2 className="text-center my-4">There are no pokemons at the moment</h2>
+        <h2 className="text-center my-4">There are no pokemons favorites at the moment</h2>
       ) : (
         <table className="table table-striped">
           <thead>

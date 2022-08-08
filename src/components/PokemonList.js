@@ -21,6 +21,14 @@ const PokemonsList = () => {
   return (
     <div>
       <h1 className="text-center">Pokemons List</h1>
+
+      {loading ? (
+        <div className="spinner-border text-primary text-center d-block mx-auto" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      ) : (
+        ''
+      )}
       <table className="table table-striped">
         <thead>
           <tr className="text-center">

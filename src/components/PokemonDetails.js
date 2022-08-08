@@ -20,7 +20,7 @@ const PokemonDetails = () => {
       <PokemonCard pokemon={pokemon} />
 
       <div className="text-center">
-        <Link className="btn btn-warning mx-2 my-4" to="/favorites">
+        <Link className="btn btn-success mx-2 my-4" to="/favorites">
           Go back
         </Link>
       </div>
