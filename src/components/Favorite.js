@@ -6,12 +6,12 @@ import Pokemon from './Pokemon.js';
 import { Table } from 'react-bootstrap';
 
 const Favorite = () => {
-  const { pokemons } = useContext(PokemonsContext);
+  const { favorites } = useContext(PokemonsContext);
 
   return (
     <div>
       <h1 className="text-center">Favorites</h1>
-      {pokemons.length === 0 ? (
+      {favorites.length === 0 ? (
         <h2 className="text-center">There are no pokemons at the moment</h2>
       ) : (
         <table className="table table-striped">
@@ -22,7 +22,7 @@ const Favorite = () => {
             </tr>
           </thead>
           <tbody>
-            <Pokemon pks={pokemons} setButton={false} />
+            <Pokemon pks={favorites} setButton={false} />
           </tbody>
         </table>
       )}

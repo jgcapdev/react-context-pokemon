@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 const Context = React.createContext({});
 
 export function PokemonsContextProvider({ children }) {
-  const [pokemons, setPokemons] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
-  return <Context.Provider value={{ pokemons, setPokemons }}>{children}</Context.Provider>;
+  return <Context.Provider value={{ favorites, setFavorites }}>{children}</Context.Provider>;
 }
 
 export default Context;
