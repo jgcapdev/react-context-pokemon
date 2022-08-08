@@ -3,7 +3,7 @@ const PokemonCard = ({ pokemon }) => {
 
   return (
     <div className="card text-center bg-primary">
-      {/* <img className="card-img-top" src={pokemon.sprites.front_default || ''} alt="Card image cap" /> */}
+      {/* <img className="card-img-top" src={pokemon.sprites.front_default} alt="Card image cap" /> */}
       <div className="card-body">
         <h5 className="card-title">{pokemon.name}</h5>
       </div>

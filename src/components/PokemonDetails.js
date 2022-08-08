@@ -16,7 +16,8 @@ const PokemonDetails = () => {
 
   return (
     <div>
-      <h1 className="text-center">Details for {name.toUpperCase()}</h1>
+      <h1 className="text-center mb-4">Details for {name.toUpperCase()}</h1>
+
       <PokemonCard pokemon={pokemon} />
 
       <div className="text-center">
